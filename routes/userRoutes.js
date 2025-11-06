@@ -7,6 +7,6 @@ const userRoute = express.Router()
 
 userRoute.post('/register', createUser)
 userRoute.post('/login' , loginUser)
-userRoute.post('/admin/register', adminOnlyMiddleware, authMiddleware , createAdmin)
+userRoute.post('/admin/register', authMiddleware, adminOnlyMiddleware, createAdmin)
 
 export default userRoute;
